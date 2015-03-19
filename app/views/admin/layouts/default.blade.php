@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Lego Algerie - @yield('title')</title>
+    <title>Laravel-with-admin</title>
 
     <!-- App css -->
     <link href="assets/admin/css/app.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Lego Algerie</a>
+                <a class="navbar-brand" href="index.html">Laravel-with-admin</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -150,7 +150,7 @@
                         <a href="#"><i class="fa fa-tachometer"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> Produits</a>
+                        <a href="#"><i class="fa fa-table"></i> Products</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Gammes</a>
@@ -159,10 +159,10 @@
                         <a href="#"><i class="fa fa-sliders"></i> Slides</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-gamepad"></i> Jeux</a>
+                        <a href="#"><i class="fa fa-gamepad"></i> Games</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-users"></i> Utilisateurs</a>
+                        <a href="#"><i class="fa fa-users"></i> Users</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-line-chart"></i> Stats</a>
@@ -193,7 +193,7 @@
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <i class="fa fa-info-circle"></i>  <strong>Like Lego Algerie?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Lego Algerie 2</a> for additional features!
+                            <i class="fa fa-info-circle"></i>  <strong>Like Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">Admin 2</a> for additional features!
                         </div>
                     </div>
                 </div>
@@ -292,29 +292,48 @@
                 <!-- /.row -->
 
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-area-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
+                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Tasks Panel</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">just now</span>
+                                        <i class="fa fa-fw fa-calendar"></i> Calendar updated
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">4 minutes ago</span>
+                                        <i class="fa fa-fw fa-comment"></i> Commented on a post
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">23 minutes ago</span>
+                                        <i class="fa fa-fw fa-truck"></i> Order 392 shipped
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">46 minutes ago</span>
+                                        <i class="fa fa-fw fa-money"></i> Invoice 653 has been paid
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">1 hour ago</span>
+                                        <i class="fa fa-fw fa-user"></i> A new user has been added
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">2 hours ago</span>
+                                        <i class="fa fa-fw fa-check"></i> Completed task: "pick up dry cleaning"
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">yesterday</span>
+                                        <i class="fa fa-fw fa-globe"></i> Saved the world
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">two days ago</span>
+                                        <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"
+                                    </a>
+                                </div>
                                 <div class="text-right">
-                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
