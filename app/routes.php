@@ -1,17 +1,35 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
+|------------------------------------------------------------------------------------
+| Default Route
+|------------------------------------------------------------------------------------
 */
-
 Route::get('/', function()
 {
 	return View::make('hello');
+});
+
+
+/*
+|------------------------------------------------------------------------------------
+| Login/Logout
+|------------------------------------------------------------------------------------
+*/
+Route::get('login', ['uses' => 'UsersController@login', 'as' => 'login']);
+Route::post('login',['uses' => 'UsersController@signin', 'as' => 'signin']);
+      
+/*
+|------------------------------------------------------------------------------------
+| Admin Dash
+|------------------------------------------------------------------------------------
+*/
+Route::group(array('prefix' => 'admin'), function()
+{
+    // Index Dash
+    Route::get('/', function()
+    {
+        return View::make('admin.layouts.default');
+    });
+
 });
