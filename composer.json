@@ -19,9 +19,11 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php",
-			"app/Widgets"
-		]
+			"app/tests/TestCase.php"
+		],
+		"psr-0":{
+			"Widgets": "app/"
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [

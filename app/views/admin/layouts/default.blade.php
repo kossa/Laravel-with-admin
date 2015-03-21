@@ -12,10 +12,16 @@
     <title>Laravel-with-admin</title>
 
     <!-- App css -->
-    <link href="assets/admin/css/app.css" rel="stylesheet">
+    <link href="/assets/admin/css/app.css" rel="stylesheet">
+
+    <!-- DataTables css -->
+    <link href="/assets/commun/plugins/datatables/css/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="assets/commun/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/commun/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom css -->
+    <link href="/assets/admin/css/customize.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -292,6 +298,20 @@
                 <!-- /.row -->
 
                 <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-table"></i> Data Tables</h3>
+                            </div>
+                            <div class="panel-body">
+                                @include('admin._partials.datatables')
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -476,6 +496,12 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="/assets/commun/js/bootstrap.min.js"></script>
 
+    <!-- Data Tables -->
+    <script src="/assets/commun/plugins/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/commun/plugins/datatables/js/dataTables.bootstrap.js"></script>
+
+    <!-- JS app -->
+    <script src="/assets/admin/js/app.js"></script>
 
 </body>
 
